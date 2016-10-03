@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './semantic-ui/dist/components/reset.min.css';
 import './semantic-ui/dist/semantic.min.css';
@@ -10,7 +9,9 @@ import './semantic-ui/dist/components/divider.min.css';
 import './semantic-ui/dist/components/header.min.css';
 import './semantic-ui/dist/components/site.min.css';
 
+import About from './About';
 import LongTweetInputContainer from './LongTweetInputContainer';
+import Samples from './Samples';
 import Settings from './Settings';
 import TweetSlicesContainer from './TweetSlicesContainer';
 
@@ -24,7 +25,8 @@ class App extends Component {
         ellipses: '...',
         ellipsesEnabled: true,
         delimiter: ' ',
-        maxParts: 50
+        maxParts: 50,
+        maxPartsIndicator: 0
     };
 
     this.state = {
@@ -33,6 +35,7 @@ class App extends Component {
       text: initialText
     }
 
+    // This needs to be bound
     this.updateParent = this.updateParent.bind(this);
   }
 
@@ -59,19 +62,23 @@ class App extends Component {
               <LongTweetInputContainer updateParent={ this.updateParent }
                                        text={ this.state.text }
                                        config={ this.state.config } />
+
+              <div className="ui one column grid vertically padded stackable">
+                <div className="column wide">
+                  <div className="ui section divider"></div>
+                    <Samples />
+                    <Settings text={ this.state.text }
+                              updateParent={ this.updateParent }
+                              config={ this.state.config } />
+                </div>
+              </div>
             </div>
             <div className="six wide column">
-              <TweetSlicesContainer slices={ this.state.slices } />
+              <TweetSlicesContainer slices={ this.state.slices }
+                                    maxPartsIndicator={ this.state.config.maxPartsIndicator } />
             </div>
           </div>
-
-          <div className="ui two column centered grid">
-            <div className="column">
-              <Settings text={ this.state.text }
-                        updateParent={ this.updateParent }
-                        config={ this.state.config } />
-            </div>
-          </div>
+          <About />
         </div>
       </div>
     );

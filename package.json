@@ -48,6 +48,8 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "clipboard": "^1.5.12",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "semantic-ui-button": "^2.2.3"

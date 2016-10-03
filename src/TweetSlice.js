@@ -9,25 +9,17 @@ import './semantic-ui/dist/components/divider.min.css';
 import './semantic-ui/dist/components/header.min.css';
 import './semantic-ui/dist/components/site.min.css';
 
+import cx from 'classnames';
+
 class TweetSlice extends Component {
-  constructor(props) {
-    super(props);
-    this.onChange = this.onChange.bind(this);
-    this.state = {
-      value: props.text
-    }
-  }
-
-  onChange(e) {
-    this.setState({
-      value: e.target.value
-    })
-  }
-
   render() {
+    let sliceClass = cx('field', this.props.className);
     return (
-        <div className="field">
-          <textarea rows="4" value={ this.state.value } onChange={ this.onChange }></textarea>
+        <div className={ sliceClass } style={{ position: 'relative' }} onClick={ this.props.onClick }>
+          <textarea rows="4" value={ this.props.text } readOnly></textarea>
+          <div className="ui bottom right attached label copy"
+               data-clipboard-text={ this.props.text }
+               style={{ cursor: 'pointer' }} >Copy</div>
         </div>
     );
   }

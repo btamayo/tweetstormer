@@ -25,7 +25,7 @@ class TweetStorm {
         text = `${originalText}`;
 
     let defaultTemplate = `${ellipses} ${paginationText}`,
-        append = ellipsesEnabled ? defaultTemplate : paginationText,
+        append = ellipsesEnabled ? defaultTemplate : ` ${paginationText}`, //Add space
         appendLength = append.length;
 
 
@@ -56,7 +56,6 @@ class TweetStorm {
         let _paginationText = paginationText.replace('$i', parts.length + 1);
         _paginationText = _paginationText.replace('$n', parts.length + 1);
 
-        // Add a space for cleanliness
         parts.push(text.concat(` ${_paginationText}`));
         break;
       }
@@ -67,11 +66,19 @@ class TweetStorm {
       // Get the index of the last space of the slice
       let delimIndex = sample.lastIndexOf(delimiter);
 
-      // Get text from the beginning of substring (except chop off the delimiter) until the index of the last space
-      let slice = sample.substring(0, delimIndex);
+      let slice;
 
-      // Change what text is for next iteration, chop off delimiter
-      text = text.substring(delimIndex + delimiter.length);
+      // If there isn't a delimiter left, just cut it off at wherever it ends
+      if (delimIndex === -1) {
+        slice = sample;
+        text = text.substring(slice.length);
+      } else {
+        // Get text from the beginning of substring (except chop off the delimiter) until the index of the last space
+        slice = sample.substring(0, delimIndex);
+
+        // Change what text is for next iteration, chop off delimiter
+        text = text.substring(delimIndex + delimiter.length);
+      }
 
       // Push to arr
       parts.push(slice);

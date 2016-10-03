@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './semantic-ui/dist/components/reset.min.css';
 import './semantic-ui/dist/semantic.min.css';
@@ -28,14 +27,14 @@ class LongTweetInputContainer extends Component {
     this.props.updateParent(this.state);
   }
 
-  onChange(e) {
-    this.updateSlices(e.target.value);
-  }
-
   componentWillReceiveProps(newProps) {
     if (this.props.config && this.props.config !== newProps.config) {
       this.updateSlices(this.state.text, newProps.config);
     }
+  }
+
+  onChange(e) {
+    this.updateSlices(e.target.value);
   }
 
   updateSlices(text, newConfig) {
@@ -52,7 +51,7 @@ class LongTweetInputContainer extends Component {
       <div className="ui form">
         <h3>Your long tweet:</h3>
         <div className="field">
-          <textarea rows="5" value={ this.state.text } onChange={ this.onChange } ></textarea>
+          <textarea rows="8" value={ this.state.text } onChange={ this.onChange } ></textarea>
         </div>
       </div>
     )
