@@ -22,6 +22,7 @@ class App extends Component {
     const initialText = "Type your tweet here!";
     const initialConfig = {
         paginationText: '($i/$n)',
+        startingCount: 1,
         ellipses: '...',
         ellipsesEnabled: true,
         delimiter: ' ',
@@ -65,11 +66,11 @@ class App extends Component {
 
               <div className="ui one column grid vertically padded stackable">
                 <div className="column wide">
-                  <div className="ui section divider"></div>
-                    <Samples />
                     <Settings text={ this.state.text }
                               updateParent={ this.updateParent }
                               config={ this.state.config } />
+                    <div className="ui section divider"></div>
+                    <Samples />
                 </div>
               </div>
             </div>

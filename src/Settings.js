@@ -66,7 +66,13 @@ class Settings extends Component {
         description: "Append <code>\"...\"</code> at the end of every tweet part, except for the last one, before the pagination.",
         defaultValue: true,
         inputType: "checkbox"
-      }
+      },
+      startingCount: {
+        displayName: 'Starting Count',
+        description: 'Start with a different number that isn\'t 1. The total will adjust, or you can change it in the pagination template.',
+        defaultValue: 1,
+        inputType: "textfield"
+      },
     }
 
     // @NOTE: Should this be in render()?

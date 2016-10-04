@@ -9,7 +9,6 @@ import './semantic-ui/dist/components/divider.min.css';
 import './semantic-ui/dist/components/header.min.css';
 import './semantic-ui/dist/components/site.min.css';
 
-
 class About extends Component {
   render() {
     return (
