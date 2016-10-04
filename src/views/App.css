@@ -1,0 +1,56 @@
+/* Overrides */
+h1.ui.header {
+  color: #D55672;
+}
+
+h3.ui.header {
+  color: #AF475E;
+}
+
+.overflow {
+  background-color: red;
+}
+
+.ui[class*="bottom attached"].label.active-copy {
+  background-color: rgb(49, 183, 72);
+}
+
+.tweet-slice textarea:focus, .ui.form textarea:focus.tweet-slice {
+  border: 1px solid rgba(34,36,38,.15);
+  border-color: rgba(34,36,38,.15);
+}
+
+.ui[class*="bottom attached"].label {
+  background-color: #64b3a1;
+  font-weight: 400;
+  color: #FFF;
+}
+
+.ui.bottom.attached.copy:hover {
+  background-color: #00D1A2;
+}
+
+.ui.card>.extra, .ui.cards>.card>.extra {
+  padding: .35em .5em;
+}
+
+.ui.card, .ui.cards>.card {
+  border: 1px solid rgb(49, 183, 72);
+}
+
+.ui.card.active-copy, .ui.cards>.card.active-copy {
+  box-shadow: 0 1px 3px 0 rgb(49, 183, 72),0 0 0 1px rgb(49, 183, 72);
+}
+
+.ui.footer.segment {
+  color: #585858;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #585858;
+}
+
+.footer a:hover {
+  color: #ff4b4b;
+}

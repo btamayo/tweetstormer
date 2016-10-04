@@ -1,0 +1,4 @@
+dist/*
+webpack.config.js
+semantic-ui/**/*
+src/semantic-ui/**/*.js
