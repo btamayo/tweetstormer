@@ -15,6 +15,7 @@ class About extends Component {
                 <a href="https://github.com/btamayo">
                   <Icon name='github' />
                 </a>
+                <br />
               </div>
             </div>
           </div>

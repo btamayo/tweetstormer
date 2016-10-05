@@ -8,15 +8,28 @@ class TweetSlicesContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastCopiedIndex: -1
+      lastCopiedIndex: -1,
+      empty: false
     };
   }
 
   componentDidMount() {
     this.clip = new Clipboard('.copy');
     this.clip.on('success', (e) => {
-      console.log(`Copied: ${e.text}`);
+      // console.log(`Copied: ${e.text}`);
     });
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.slices.length === 1 && props.slices[0].length === 0) {
+      this.setState({
+        empty: true
+      })
+    } else {
+      this.setState({
+        empty: false
+      })
+    }
   }
 
   componentWillUnmount() {
@@ -41,7 +54,7 @@ class TweetSlicesContainer extends Component {
     return (
       <div>
         <div className='ui teal message'>
-          <h3>Your tweet part(s): { this.props.slices.length || 0 } total!</h3>
+          <h3>Your tweet part(s): { this.state.empty ? 'None yet' : `${this.props.slices.length} total!` }</h3>
         </div>
         <div className='ui one column grid stackable padded'>
           {/* Key has to be item and not index so that it can differentiate */}

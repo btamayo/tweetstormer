@@ -4,7 +4,7 @@ import { Card } from 'semantic-ui-react';
 
 class TweetSlice extends Component {
   render() {
-    let sliceClass = cx('ui bottom attached label', this.props.className);
+    let sliceClass = cx('ui bottom attached label copy', this.props.className);
     return (
       <div className='row'>
         <Card className={ this.props.isActiveCopy ? 'active-copy' : '' } fluid>

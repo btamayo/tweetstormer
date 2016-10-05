@@ -35,31 +35,36 @@ class Settings extends Component {
         displayName: 'Pagination Text',
         description: 'Change the template of the pagination of your tweets. You may include <code>$i</code> which will be replaced with the tweet\'s number out of the total, and <code>$n</code> which will be displayed as the total number of tweets.',
         defaultValue: '($i/$n)',
-        inputType: 'textfield'
+        inputType: 'textfield',
+        enabled: true
       },
       delimiter: {
         displayName: 'Delimiter',
-        description: 'Change how your tweet is separated into words.',
+        description: 'Change how your tweet is separated into words. If your delimiter is not found, it may break inside words.',
         defaultValue: ' (single space)',
         inputType: 'textfield',
+        enabled: false
       },
       maxPartsIndicator: {
         displayName: 'Max # of tweet parts',
         description: 'Show a warning when your tweetstorm exceeds this number of tweets. If it\'s set to 0, there is no maximum.',
         defaultValue: 0,
-        inputType: 'textfield'
+        inputType: 'textfield',
+        enabled: false
       },
       ellipsesEnabled: {
         displayName: 'Enable trailing ellipses',
         description: 'Append <code>\'...\'</code> at the end of every tweet part, except for the last one, before the pagination.',
         defaultValue: true,
-        inputType: 'checkbox'
+        inputType: 'checkbox',
+        enabled: true
       },
       startingCount: {
         displayName: 'Starting Count',
         description: 'Start with a different number that isn\'t 1. The total will adjust, or you can change it in the pagination template.',
         defaultValue: 1,
-        inputType: 'textfield'
+        inputType: 'textfield',
+        enabled: true
       },
     };
 
@@ -71,6 +76,8 @@ class Settings extends Component {
         if (!stateConfig.hasOwnProperty(key)) {
           throw new Error(`Error: Descriptions for params have no matching key in stateConfig object: ${key}`);
         }
+
+        if (!descriptions[key].enabled) { continue; }
 
         _rows = _rows.concat(<Setting
                                 name={ key }

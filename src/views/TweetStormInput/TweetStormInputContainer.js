@@ -47,7 +47,7 @@ class TweetStormInputContainer extends Component {
           <div className='header'>
             Your tweetstorm
           </div>
-          <p>Input your tweetstorm here and it will automatically be formatted and numbered into tweets on the right.</p>
+          <p>Input text here and it will automatically be formatted and numbered into tweets on the right.</p>
         </div>
         <div className='ui form attached fluid segment'>
           <div className='field'>

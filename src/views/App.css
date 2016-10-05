@@ -54,3 +54,9 @@ h3.ui.header {
 .footer a:hover {
   color: #ff4b4b;
 }
+
+.ui.info.message, .ui.attached.info.message, .ui.info.message {
+  background-color: #FFF;
+  color: rgba(0,0,0,.87);
+  box-shadow: 0 0 0 1px rgba(34,36,38,.15) inset;
+}

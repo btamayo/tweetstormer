@@ -16,7 +16,6 @@ class App extends Component {
       ellipses: '...',
       ellipsesEnabled: true,
       delimiter: ' ',
-      maxParts: 50,
       maxPartsIndicator: 0
     };
 
