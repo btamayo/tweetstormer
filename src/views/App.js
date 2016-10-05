@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='ui container'>
-          <h1 className='ui header'>TWEETSTORMER <span style={{ fontSize: '0.5em', color: '#989898' }}>0.1.0</span></h1>
+          <h1 className='ui header'>TWEETSTORMER <span style={{ fontSize: '0.5em', color: '#989898', fontWeight: '400' }}>0.1.0</span></h1>
           <h3 className='ui header'>Automatically transform your long tweet into a tweetstorm</h3>
           <div className='ui hidden divider' style={{ margin: '2rem 0' }}></div>
 

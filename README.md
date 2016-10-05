@@ -1,9 +1,11 @@
 ## Tweetstormer ##
 
-Slice your tweets into a tweetstorm.
+Slice your tweets into a tweetstorm: http://www.tweetstormer.co/.
+Completely static site.
 
 ### TODO:
 
+```
 - @TODO: Test: Works with different config
 - @TODO: Test: Works with null config
 - @TODO: Test: Correctly puts smileys in the right place
@@ -17,12 +19,15 @@ Slice your tweets into a tweetstorm.
 - ✅ Update sample tweets
 - ✅ Add preloaded tweet
 - @TODO: Add force line break char
+```
 
 ### Credits:
-- Semantic UI & react
-- Icons8
+- [Semantic UI](http://semantic-ui.com/) & [Semantic UI React](https://github.com/TechnologyAdvice/stardust)
+- [Icons8](https://icons8.com/)
+- [Create React App](https://github.com/facebookincubator/create-react-app)
+- [Hipster Ipsum](https://hipsum.co/)
+- [Corporate Ipsum](http://www.cipsum.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
+---
 
 LICENSE: MIT
