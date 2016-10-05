@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Slice up text into a tweetstorm">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
@@ -69,9 +70,8 @@
     }
 
     @media only screen and (max-width: 768px) {
-      .stackable.grid:before {
-        width: 100%;
-        left: 0em;
+      .ui.stackable.grid:not(.vertically)>.row {
+        margin: 1em;
       }
     }
   </style>

@@ -1,6 +1,6 @@
 {
   "name": "tweetstormer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "autoprefixer": "6.4.1",
