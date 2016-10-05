@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favico.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Tweetstormer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+
+  <!-- GLOBALS: reset.min.css, semantic.min.css, grid, header, input, container, site, jQuery, semantic.min.js -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/components/reset.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/semantic-ui@2.2.4(components/grid.min.css+components/header.min.css+components/input.min.css+components/container.min.css)">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/components/site.min.css">
+
+  <style type="text/css">
+    /* credits to GitHub code md */
+    code {
+      padding: 0;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      margin: 0;
+      font-size: 85%;
+      background-color: rgba(0,0,0,0.04);
+      border-radius: 3px;
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+
+    code::before, code::after {
+      letter-spacing: -0.2em;
+      content: "\00a0";
+    }
+
+    .container {
+      padding: 5em 0em;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    img + img {
+      margin-top: 0.5em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .stackable.grid:before {
+        width: 100%;
+        left: 0em;
+      }
+    }
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85187865-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</html>

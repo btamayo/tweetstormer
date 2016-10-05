@@ -1,0 +1,33 @@
+{
+    'env': {
+        'browser': true,
+        'es6': true,
+        'jquery': true
+    },
+    'extends': ['eslint:recommended', 'plugin:react/recommended'],
+    'parserOptions': {
+        'ecmaFeatures': {
+            'experimentalObjectRestSpread': true,
+            'jsx': true
+        },
+        'sourceType': 'module'
+    },
+    'plugins': [
+        'react'
+    ],
+    'rules': {
+        'no-console': WARN,
+        'indent': ['warn', 2],
+        'linebreak-style': ['warn', 'unix'],
+        'quotes': ['warn', 'single'],
+        'object-curly-spacing': [1, 'always', { 'objectsInObjects': false, 'arraysInObjects': false }],
+        'no-unused-vars': ['warn', { 'vars': 'all', 'args': 'after-used' }],
+        'semi': ['warn', 'always'],
+        'react/display-name': 0,
+        'react/jsx-closing-bracket-location': [1, { 'selfClosing': 'after-props', 'nonEmpty': 'after-props' }],
+        'react/jsx-curly-spacing': [1, 'always', { 'allowMultiline': true, 'spacing': { 'objectLiterals': 'never' }}],
+        'react/jsx-uses-vars': 1,
+        'react/jsx-space-before-closing': [2, 'always'],
+        'react/prop-types': 0
+    }
+}
