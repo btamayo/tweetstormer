@@ -3,6 +3,7 @@ import About from './About';
 import TweetStormInput from './TweetStormInput';
 import TweetSlices from './TweetSlices';
 import './App.css';
+import '../lib/twitter';
 
 class App extends Component {
   constructor(props) {

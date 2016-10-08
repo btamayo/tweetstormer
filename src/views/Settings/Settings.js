@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Setting from './Setting';
+import { twitterLogin } from '../../lib/twitter';
+import { Button } from 'semantic-ui-react';
 
 class Settings extends Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class Settings extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
 
   onChange(e) {
@@ -26,6 +29,10 @@ class Settings extends Component {
     }, function() {
       this.props.updateParent(this.state);
     });
+  }
+
+  onClick(e) {
+    twitterLogin();
   }
 
   render() {
@@ -92,6 +99,7 @@ class Settings extends Component {
 
     return (
       <div className='ui grid top aligned internally celled'>
+        <Button onClick={ this.onClick } >Test</Button>
         { settingDescs(this.state.config, _descriptions, this.onChange) }
       </div>
     );
