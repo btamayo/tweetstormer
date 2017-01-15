@@ -10,13 +10,13 @@
             'experimentalObjectRestSpread': true,
             'jsx': true
         },
-        'sourceType': 'module'
+        'sourceType': "module"
     },
     'plugins': [
         'react'
     ],
     'rules': {
-        'no-console': WARN,
+        'no-console': 0,
         'indent': ['warn', 2],
         'linebreak-style': ['warn', 'unix'],
         'quotes': ['warn', 'single'],

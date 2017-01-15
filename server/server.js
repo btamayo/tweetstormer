@@ -50,19 +50,19 @@ if (!isProduction) {
 
   app.use(webpackHotMiddleware(compiler));
 
-  app.get('*', (req, res) =>{
+  app.get('*', (req, res) => {
     res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'build/index.html')));
     res.end();
   });
 } else {
   app.use(express.static(path.join(config.root, 'build')));
-  app.get('/', (req, res) =>{
+  app.get('/', (req, res) => {
     res.sendFile(path.join(config.root, '/build/index.html'));
   });
 
   // @TODO: 404 fallback
 }
 
-app.listen(config.port, () =>{
+app.listen(config.port, () => {
   console.log('Server running on port ' + config.port);
 });
