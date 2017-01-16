@@ -57,3 +57,7 @@ build
 #logs
 *.log
 npm-debug.log*
+
+# Storybook
+.storybook/
+stories

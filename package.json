@@ -50,7 +50,8 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "1.16.1",
     "webpack-hot-middleware": "^2.15.0",
-    "whatwg-fetch": "1.0.0"
+    "whatwg-fetch": "1.0.0",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -64,12 +65,12 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node server/server",
-    "react:start": "node scripts/start.js",
-    "react:build": "node scripts/build.js",
     "server": "NODE_ENV=development node server/server",
     "test": "node scripts/test.js --env=jsdom",
-    "build:prod": "NODE_ENV=production webpack -p --config config/webpack.config.prod.exp.js",
-    "server:prod": "NODE_ENV=production nodemon server/server"
+    "build:prod": "NODE_ENV=production webpack -p --config config/webpack.config.prod.js",
+    "server:prod": "NODE_ENV=production nodemon server/server",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "moduleFileExtensions": [
