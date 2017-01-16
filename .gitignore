@@ -2,12 +2,49 @@
 
 # dependencies
 node_modules
+jspm_packages
 
 #idea
 .idea
 
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
 # testing
 coverage
+.test-results
+.tmp
+lib-cov
 
 # production
 build
@@ -15,5 +52,8 @@ build
 # misc
 .DS_Store
 .env
-npm-debug.log
 *.bak
+
+#logs
+*.log
+npm-debug.log*
