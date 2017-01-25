@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - '6.1'
+addons:
+  ssh_known_hosts: biancatamayo.me
 before_install:
   - bash scripts/_hooks/travis-post-receive-git.sh
 after_success:
