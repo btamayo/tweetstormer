@@ -64,8 +64,8 @@
     "semantic-ui-react": "^0.54.1"
   },
   "scripts": {
-    "start": "NODE_ENV=production node server/server",
-    "server": "NODE_ENV=development node server/server",
+    "start": "NODE_ENV=production node server/server.js",
+    "server": "NODE_ENV=development node server/server.js",
     "test": "node scripts/test.js --env=jsdom",
     "build:prod": "NODE_ENV=production webpack -p --config config/webpack.config.prod.js",
     "server:prod": "NODE_ENV=production nodemon server/server",
