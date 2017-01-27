@@ -2,11 +2,6 @@
  * Created by bianca on 1/13/17.
  */
 
-/**
- * Created by bianca on 1/10/17.
- */
-
-
 const express = require('express'),
       path = require('path'),
       bodyParser = require('body-parser');
