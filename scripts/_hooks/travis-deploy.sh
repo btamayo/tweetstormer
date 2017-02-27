@@ -13,6 +13,6 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
 else
     git checkout -b staging
     git add .
-    git commit -m "Staging test"
+    git commit -m "Staging/dev test"
     git push -u --force deploy staging
 fi
